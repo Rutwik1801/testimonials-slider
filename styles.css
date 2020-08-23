@@ -1,0 +1,154 @@
+
+ 
+ @media only screen and (max-width: 114rem){
+    .main{
+        height: 70vh;
+        width: 60vw;
+        grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+        padding: 6rem 10rem 6rem 12rem;
+        background-size: 52%,50%,10%;
+        background-position: center right 20%, bottom left,top 35% left 20%;          
+    }
+    .main__image--img{
+        width: 90%;
+        margin-left: -5rem;
+        align-self: center;
+        grid-column: 1/-1;
+        transform: translateY(4rem);
+    }
+    .main__text{
+        font-size: 1.8rem;
+    }
+    .main__buttons{
+        transform: translateY(-0.5rem);
+    }
+
+}
+ 
+ @media only screen and (max-width: 600px){
+     .main{
+         height: 100vh;
+         width: 100vw;
+        grid-template-rows: 1fr 1fr; 
+        padding:4rem;
+        background-size: 70%,80%,20%;
+        background-position: top 10% center, bottom left,top 65% left 50%;       
+     }
+     .main__image{
+         grid-row: 1/2;
+     }
+     .main__image--img{
+        width: 65%;
+        justify-self: center;
+        transform: translate(3rem,4rem);
+    }
+    .main__text{
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 0 4rem;
+    }
+    .main__text--paragraph strong{
+        display: block;
+        font-size: 1.4rem;
+    }
+    .main__text--paragraph{
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+    .main__buttons{
+        margin-left:70%;
+        transform: translateY(1rem);
+    }
+}
+
+
+
+
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #eee;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.main{
+    backface-visibility: hidden;
+    background-image: url(./images/pattern-bg.svg),
+    url(./images/pattern-curve.svg),
+    url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat, no-repeat,no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%) ;
+   background-color: white;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.main__image{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100%;
+}
+
+.main__image--img{
+    border-radius: 3px;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+}
+
+.main__text{
+    /* background-image: url(./images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-position:top -25% left 25%; */
+  color: hsl(240, 38%, 20%);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  z-index: 2;
+}
+.main__text--paragraph{
+   font-size:1.2rem ;
+   color:  hsl(240, 18%, 77%);
+}
+.main__text--paragraph strong{
+    color:  hsl(240, 38%, 20%);
+}   
+.main__buttons{
+    display: inline;
+    text-align: center;
+    border-radius: 200px;
+    padding: 2rem 3rem;
+    height: 1rem;
+    width: 6rem;
+    background-color:#eee;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.4);
+}
+.main__buttons img{
+    transform:translateY(-3px);
+   color:hsl(240, 18%, 77%) ;
+}
+
+.main__buttons img:first-of-type{
+    margin-right: 3rem;
+}
+
+.main--1{
+    backface-visibility: hidden;
+    transition: all 0.3s;
+}
+
+.opa{
+  opacity: 0;
+}
+
